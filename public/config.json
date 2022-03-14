@@ -15,10 +15,10 @@
     "arguments": {
         "execute": {
             "inArguments": [
-                {
-                  "email": "{{Contact.Default.EmailAddress}}",
-                  "to": "{{Contact.Attribute.TwilioV1.TwilioNumber}}" 
-                }               
+               { "TargetNumber": "{{Contact.Attribute.TestCustomActivity.TargetNumber}}" },
+               { "ProtocolId": "{{Contact.Attribute.TestCustomActivity.ProtocolId}}" },
+               { "ContactId": "{{Contact.Attribute.TestCustomActivity.ContactId}}" }
+                          
             ],
             "outArguments": [],
             "url": "https://custom-test-sms.herokuapp.com/journeybuilder/execute",
@@ -79,28 +79,21 @@
             "execute": {
                 "inArguments": [
                     {
-                        "accountSid": {
+                        "smsId": {
                             "dataType": "String",
                             "isNullable": false,
                             "direction": "out"   
                         }
                     },                    
                     {
-                        "authToken": {
+                        "ContactId": {
                             "dataType": "String",
                             "isNullable": false,
                             "direction": "out"   
                         }
                     },                    
                     {
-                        "from": {
-                            "dataType": "Phone",
-                            "isNullable": true,
-                            "direction": "out"   
-                        }
-                    },                    
-                    {
-                        "to": {
+                        "TargetNumber": {
                             "dataType": "Phone",
                             "isNullable": false,
                             "direction": "out"   
@@ -114,9 +107,9 @@
                         }
                     },                    
                     {
-                        "email": {
-                            "dataType": "Email",
-                            "isNullable": true,
+                        "ProtocolId": {
+                            "dataType": "String",
+                            "isNullable": false,
                             "direction": "out"
                         }
                     }
