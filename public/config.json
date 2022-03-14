@@ -79,7 +79,7 @@
             "execute": {
                 "inArguments": [
                     {
-                        "smsId": {
+                        "accountSid": {
                             "dataType": "String",
                             "isNullable": false,
                             "direction": "out"   
