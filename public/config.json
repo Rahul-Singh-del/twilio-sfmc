@@ -32,7 +32,7 @@
     "configurationArguments": {
       "applicationExtensionKey": "4de0754a-5cb7-4407-a6a6-6d22af4d7e83",
        "save": {
-           "url": "https://custom-test-sms.herokuapp.com/save",
+           "url": "https://custom-test-sms.herokuapp.com/journeybuilder/save",
             "verb": "POST",
             "body": "",
             "format": "json",
@@ -40,7 +40,7 @@
             "timeout": 2000
        },
        "publish": {
-           "url": "https://custom-test-sms.herokuapp.com/publish",
+           "url": "https://custom-test-sms.herokuapp.com/journeybuilder/publish",
             "verb": "POST",
             "body": "",
             "format": "json",
@@ -48,7 +48,7 @@
             "timeout": 2000
        },
        "validate": {
-           "url": "https://custom-test-sms.herokuapp.com/validate",
+           "url": "https://custom-test-sms.herokuapp.com/journeybuilder/validate",
             "verb": "POST",
             "body": "",
             "format": "json",
@@ -56,7 +56,7 @@
             "timeout": 2000
        },
        "stop": {
-           "url": "https://custom-test-sms.herokuapp.com/stop",
+           "url": "https://custom-test-sms.herokuapp.com/journeybuilder/stop",
             "verb": "POST",
             "body": "",
             "format": "json",
