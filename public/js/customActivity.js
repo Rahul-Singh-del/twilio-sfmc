@@ -53,8 +53,12 @@ define([
                 if (key === 'accountSid') {
                     $('#accountSID').val(val);
                 }
-
-                if (key === 'authToken') {
+                
+                 if (key === 'body') {
+                    $('#messageBody').val(val);
+                }  
+                
+              /*  if (key === 'authToken') {
                     $('#authToken').val(val);
                 }
 
@@ -62,9 +66,7 @@ define([
                     $('#messagingService').val(val);
                 }
 
-                if (key === 'body') {
-                    $('#messageBody').val(val);
-                }                                                               
+                 */                                                           
 
             })
         });
@@ -91,16 +93,18 @@ define([
     function save() {
 
         var accountSid = $('#accountSID').val();
-        var authToken = $('#authToken').val();
-        var messagingService = $('#messagingService').val();
         var body = $('#messageBody').val();
+       /* var authToken = $('#authToken').val();
+        var messagingService = $('#messagingService').val(); */
 
         payload['arguments'].execute.inArguments = [{
             "accountSid": accountSid,
-            "authToken": authToken,
-            "messagingService": messagingService,
+           // "authToken": authToken,
+           // "messagingService": messagingService,
             "body": body,
-            "to": "{{Contact.Attribute.TwilioV1.TwilioNumber}}" //<----This should map to your data extension name and phone number column
+            "TargetNumber": "{{Contact.Attribute.TestCustomActivity.TargetNumber}}", //<----This should map to your data extension name and phone number column
+            "ContactId": "{{Contact.Attribute.TestCustomActivity.ContactId}}", //<----This should map to your data extension name and phone number column
+            "ProtocolId": "{{Contact.Attribute.TestCustomActivity.ProtocolId}}" //<----This should map to your data extension name and phone number column
         }];
 
         payload['metaData'].isConfigured = true;
